@@ -1,0 +1,391 @@
+@import url('https.googleapis/css?family=300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055, #7597de);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header.logo {
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background-color: white;
+    color: #2b1055;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, tranparent);
+    z-index: 1000;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#moon {
+    mix-blend-mode: screen;
+    position: absolute;
+    width: 1158px;
+    height: 667px;
+    left: 580px;
+    top: 154px;
+}
+
+section img#starsdrop {
+    position: absolute;
+    width: 250px;
+    height: 240px;
+    left: -50px;
+    top: 20px;
+}
+
+section img#kudus {
+    position: absolute;
+    width: 611px;
+    height: 740px;
+    left: 320px;
+    top: 140px;
+}
+
+section img#kanan {
+    position: absolute;
+    width: 580.73px;
+    height: 495px;
+    left: 830px;
+    top: 240px;
+    z-index: 10;
+}
+
+section img#kiri {
+    position: absolute;
+    width: 648px;
+    height: 603px;
+    left: -90px;
+    top: 120px;
+    z-index: 10;
+}
+
+#text {
+    position: absolute;
+    right: -700px;
+    color: white;
+    top: 510px;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+
+.sec h2 {
+    margin-left: 70px;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec h4 {
+    font-size: 1em;
+    margin-top: 10px;
+    color: white;
+    font-family: remachine 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.sec p {
+    font-size: 1.2em;
+    color: white;
+}
+
+.birthdayCard {
+    position: relative;
+    width: 100vh;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+    top: 230px;
+    left: 750px;
+}
+
+.birthdayCard_v2 {
+    position: relative;
+    width: 100vh;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+    top: -120px;
+    left: 210px;
+}
+
+.birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy {
+    visibility: hidden;
+}
+
+.birthdayCard_v2:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.birthdayCard_v2:hover .cardFront {
+    transform: rotateY(-160deg);
+}
+
+.birthdayCard_v2:hover .happy {
+    visibility: hidden;
+}
+
+.cardFront {
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 30px 0 50px rgba(0, 0, 0, 0.4);
+    transition: .6s;
+}
+
+.happy {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    margin: 30px;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    transition: .1s;
+}
+
+.balloons {
+    position: absolute;
+}
+
+.balloonOne,
+.balloonTwo,
+.balloonThree,
+.balloonFour {
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+}
+
+.balloonOne {
+    background-color: rgb(239, 71, 111, 0.7);
+    left: -10px;
+    top: 50px;
+}
+
+.balloonTwo {
+    background-color: rgb(6, 214, 160, 0.7);
+    left: 50px;
+    top: 20px;
+}
+
+.balloonThree {
+    background-color: rgb(255, 209, 102, 0.7);
+    left: 110px;
+    top: 50px;
+}
+
+.balloonFour {
+    background-color: rgb(17, 138, 178, 0.7);
+    left: 170px;
+    top: 20px;
+}
+
+.balloonOne:before,
+.balloonTwo:before,
+.balloonThree:before,
+.balloonFour:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 155px;
+    background-color: #ffd166;
+    top: 95px;
+    left: 43px;
+}
+
+.balloonOne:after,
+.balloonTwo:after,
+.balloonThree:after,
+.balloonFour:after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    top: 94px;
+    left: 37px;
+}
+
+.balloonOne:after {
+    border-bottom: 10px solid #ef476f;
+}
+
+.balloonTwo:after {
+    border-bottom: 10px solid #06d6a0;
+}
+
+.balloonThree:after {
+    border-bottom: 10px solid #ffd166;
+}
+
+.balloonFour:after {
+    border-bottom: 10px solid #118ab2;
+}
+
+.cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+
+.cardInside p {
+    color: black;
+}
+
+p {
+    font-size: medium;
+    font-family: 'Brush Script MT', cursive;
+    margin: 10px;
+    color: #333;
+}
+
+.name {
+    position: absolute;
+    left: 130px;
+    top: 240px;
+    color: #333;
+}
+
+.back {
+    font-family: Tahoma, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 30px;
+    outline-color: #333;
+    outline-style: dotted;
+}
+
+.message {
+    position: absolute;
+    align-items: center;
+    top: 220px;
+    left: 100px;
+    padding: 10px 10px 15px 10px;
+    padding-top: 5px;
+    background: #B1C8F9;
+    border-radius: 10px;
+}
+
+.message h5 {
+    color: black;
+    margin-bottom: 5px;
+}
+
+#btn {
+    background-color: #14CC79;
+    color: black;
+    padding: 5px 5px 5px 5px;
+    border-radius: 8px;
+    border-color: #fff;
+    cursor: pointer;
+}
+
+.sec #party {
+    position: absolute;
+    width: 100px;
+    top: 60px;
+    left: 100px;
+}
